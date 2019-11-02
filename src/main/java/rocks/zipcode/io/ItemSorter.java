@@ -1,7 +1,5 @@
 package rocks.zipcode.io;
 
-import rocks.zipcode.io.Item;
-
 import java.util.Arrays;
 import java.util.Comparator;
 
