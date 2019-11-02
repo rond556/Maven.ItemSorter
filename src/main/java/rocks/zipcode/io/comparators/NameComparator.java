@@ -1,16 +1,20 @@
 package rocks.zipcode.io.comparators;
-
 import rocks.zipcode.io.Item;
 
+import java.util.Comparator;
 /**
  * @author leon on 30/01/2019.
  */
-public class NameComparator implements Comparable<Item> {
-        private String name;
+public class NameComparator implements Comparator<Item> {
 
-        public String getName() { return name; }
+        public int compare(Item o1, Item o2) {
+                if(o1.getName().compareTo(o2.getName()) > 0){
+                        return 1;
+                } else if (o1.getName().compareTo(o2.getName()) < 0){
+                        return -1;
+                } else {
+                        return 0;
+                }
 
-        public int compareTo(Item item2) {
-            return Double.compare(this.getName(), item2.getName());
         }
 }
